@@ -238,40 +238,40 @@ while(6):
 
                 else:       
                     print('존재하지 않습니다.')
-        elif a == sudoId:   
-            if b == sudoPassword:
-                print('안녕하십니까 관리자님?')
-                print('')
-                while(1):
-                    print('1. 모든 회원들보기 \n2. 회원 강탈시키기\n3. 나가기')
-                    print('')
-                    sudosurvise = input('원하는 서비스번호: ')
-                    print('')
-                    if sudosurvise == '1':
-                    	print('')
-					    print('==========================')
-                        c.execute("SELECT * FROM members")
-					    members = c.fetchall()
-					    if(members==None):
-					        print('==가입중인 회원이 존재하지 않습니다==')
-					    else:
-					        c.execute("SELECT * FROM members")
-					        members = c.fetchall()
-					        for member in members:
-					            print("%s" % (member))
-					    print('==========================')
-					    print('')
-                    elif sudosurvise == '2':
-                        print('개발중')
-                    elif sudosurvise == '3':
-                        print('로그아웃됨...')
-                        break
-            else:
-                print('당신의 아이디나 비밀번호가 일치하지 않거나 존재하지 않습니다.')
-                print('')
-        else:
-            print('당신의 아이디나 비밀번호가 일치하지 않거나 존재하지 않습니다.')
-            print('')
+        # elif a == sudoId:   
+        #     if b == sudoPassword:
+        #         print('안녕하십니까 관리자님?')
+        #         print('')
+        #         while(1):
+        #             print('1. 모든 회원들보기 \n2. 회원 강탈시키기\n3. 나가기')
+        #             print('')
+        #             sudosurvise = input('원하는 서비스번호: ')
+        #             print('')
+        #             if sudosurvise == '1':
+        #             	print('')
+		# 			    print('==========================')
+        #                 c.execute("SELECT * FROM members")
+		# 			    members = c.fetchall()
+		# 			    if(members==None):
+		# 			        print('==가입중인 회원이 존재하지 않습니다==')
+		# 			    else:
+		# 			        c.execute("SELECT * FROM members")
+		# 			        members = c.fetchall()
+		# 			        for member in members:
+		# 			            print("%s" % (member))
+		# 			    print('==========================')
+		# 			    print('')
+        #             elif sudosurvise == '2':
+        #                 print('개발중')
+        #             elif sudosurvise == '3':
+        #                 print('로그아웃됨...')
+        #                 break
+        #     else:
+        #         print('당신의 아이디나 비밀번호가 일치하지 않거나 존재하지 않습니다.')
+        #         print('')
+        # else:
+        #     print('당신의 아이디나 비밀번호가 일치하지 않거나 존재하지 않습니다.')
+        #     print('')
 
     elif msurvise == '3':
         print('안녕하가세요')
